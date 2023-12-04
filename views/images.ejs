@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <% if (images && images.length > 0) { %>
+    <div class="image-gallery">
+      <% images.forEach(function(img) { %>
+        <img src="<%= "../images/"+img.filename%>" alt="<%= img.filename %>">
+      <% }); %>
+    </div>
+  <% } else { %>
+    <p>No images found.</p>
+  <% } %>
+</body>
+</html>
